@@ -1,80 +1,798 @@
-<div data-v-5e9078c0=""><h1 data-v-5e9078c0="">Top 52 .NET Core interview
-    questions and answers in 2021.</h1> <p data-v-5e9078c0="">
-      You can check all
-      52
-      .NET Core interview questions here 👉
-      https://devinterview.io/dev/netCore-interview-questions
-    </p> <br data-v-5e9078c0=""> <div data-v-5e9078c0="" class="unit"><div><h2>🔹 1. What is .NET Core?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The .NET Core platform is a new .NET stack that is optimized for open source development and agile delivery on NuGet. </p><p>.NET Core has two major components. It includes a small runtime that is built from the same codebase as the .NET Framework CLR. The .NET Core runtime includes the same GC and JIT (RyuJIT), but doesn’t include features like Application Domains or Code Access Security. The runtime is delivered via NuGet, as part of the ASP.NET Core package.</p><p>.NET Core also includes the base class libraries. These libraries are largely the same code as the .NET Framework class libraries, but have been factored (removal of dependencies) to enable to ship a smaller set of libraries. These libraries are shipped as <code>System.*</code> NuGet packages on NuGet.org.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/26908049/what-is-net-core" rel="noreferrer" target="_blank" title="What is .NET Core? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 2. What is MSIL?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>When we compile our .NET code then it is not directly converted to native/binary code; it is first converted into intermediate code known as MSIL code which is then interpreted by the CLR. MSIL is independent of hardware and the operating system. Cross language relationships are possible since MSIL is the same for all .NET languages. MSIL is further converted into native code.  </p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.c-sharpcorner.com/UploadFile/8ef97c/interview-question-on-net-framework-or-clr/" rel="noreferrer" target="_blank" title="What is MSIL? Interview Questions Source To Answer">c-sharpcorner.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 3. What is .NET Standard and why we need to consider it?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ol><li><strong>.NET Standard</strong> solves the code sharing problem for .NET developers across all platforms by bringing all the APIs that you expect and love across the environments that you need: desktop applications, mobile apps &amp; games, and cloud services:</li><li><strong>.NET Standard</strong> is a <strong>set of APIs</strong> that <strong>all</strong> .NET platforms <strong>have to implement</strong>. This <strong>unifies the .NET platforms</strong> and <strong>prevents future fragmentation</strong>.</li><li><strong>.NET Standard 2.0</strong> will be implemented by <strong>.NET Framework</strong>, .<strong>NET Core</strong>,
-and <strong>Xamarin</strong>. For <strong>.NET Core</strong>, this will add many of the existing APIs
-that have been requested.</li><li><strong>.NET Standard 2.0</strong> includes a compatibility shim for <strong>.NET Framework</strong> binaries, significantly increasing the set of libraries that you can reference from your .NET Standard libraries.</li><li><strong>.NET Standard</strong> <strong>will replace Portable Class Libraries (PCLs)</strong> as the
-tooling story for building multi-platform .NET libraries.</li></ol><p></p><div><div><div><div></div></div></div></div><p></p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/42939454/what-is-the-difference-between-net-core-and-net-standard-class-library-project" rel="noreferrer" target="_blank" title="What is .NET Standard and why we need to consider it? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 4. What is CTS?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The <strong>Common Type System (CTS)</strong> standardizes the data types of all programming languages using .NET under the umbrella of .NET to a common data type for easy and smooth communication among these .NET languages. </p><p>CTS is designed as a singly rooted object hierarchy with <code>System.Object</code> as the base type from which all other types are derived. CTS supports two different kinds of types: </p><ol><li><strong>Value Types</strong>: Contain the values that need to be stored directly on the stack or allocated inline in a structure. They can be built-in (standard primitive types), user-defined (defined in source code) or enumerations (sets of enumerated values that are represented by labels but stored as a numeric type).</li><li><strong>Reference Types</strong>: Store a reference to the value‘s memory address and are allocated on the heap. Reference types can be any of the pointer types, interface types or self-describing types (arrays and class types such as user-defined classes, boxed value types and delegates).</li></ol></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.c-sharpcorner.com/UploadFile/8ef97c/interview-question-on-net-framework-or-clr/" rel="noreferrer" target="_blank" title="What is CTS? Interview Questions Source To Answer">c-sharpcorner.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 5. What is a .NET application domain?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>It is an isolation layer provided by the .NET runtime. As such, App domains live with in a process (1 process can have many app domains) and have their own virtual address space.</p><p>App domains are useful because:</p><ul><li>They are less expensive than full processes</li><li>They are multithreaded</li><li>You can stop one without killing everything in the process</li><li>Segregation of resources/config/etc</li><li>Each app domain runs on its own security level</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/1094478/what-is-a-net-application-domain" rel="noreferrer" target="_blank" title="What is a .NET application domain? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 6. What is an unmanaged resource?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>Use that rule of thumb: </p><ul><li>If you found it in the Microsoft .NET Framework: <em>it's managed</em>. </li><li>If you went poking around MSDN yourself, <em>it's unmanaged</em>. </li></ul><p>Anything you've used P/Invoke calls to get outside of the nice comfy world of everything available to you in the .NET Framwork is unmanaged – and you're now <em>responsible</em> for cleaning it up.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/538060/proper-use-of-the-idisposable-interface" rel="noreferrer" target="_blank" title="What is an unmanaged resource?  Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 7. What is CLR?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The <strong>CLR</strong> stands for Common Language Runtime and it is an Execution Environment. It works as a layer between Operating Systems and the applications written in .NET languages that conforms to the Common Language Specification (CLS). The main function of Common Language Runtime (CLR) is to convert the Managed Code into native code and then execute the program.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.c-sharpcorner.com/UploadFile/8ef97c/interview-question-on-net-framework-or-clr/" rel="noreferrer" target="_blank" title="What is CLR? Interview Questions Source To Answer">c-sharpcorner.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 8. What is the difference between String and string in C#?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><code>string</code> is an alias in C# for <code>System.String</code>. So technically, there is no difference. It's like <code>int</code> vs. <code>System.Int32</code>.</p><p>As far as guidelines, it's generally recommended to use <code>string</code> any time you're referring to an object.</p><pre><code><span class="token cVar">string</span> place <span class="token cBase">=</span> <span class="token cString">"world"</span><span class="token cBase">;</span></code></pre><p>Likewise, it's generally recommended to use <code>String</code> if you need to refer specifically to the class.</p><pre><code><span class="token cVar">string</span> greet <span class="token cBase">=</span> String<span class="token cBase">.</span><span class="token cMod">Format</span><span class="token cBase">(</span><span class="token cString">"Hello {0}!"</span><span class="token cBase">,</span> place<span class="token cBase">)</span><span class="token cBase">;</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/618535/difference-between-decimal-float-and-double-in-net" rel="noreferrer" target="_blank" title="What is the difference between String and string in C#? Interview Questions Source To Answer">blogs.msdn.microsoft.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 9. What is .NET Standard?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The <strong>.NET Standard</strong> is a formal specification of .NET APIs that are intended to be available on all .NET implementations.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard" rel="noreferrer" target="_blank" title="What is .NET Standard? Interview Questions Source To Answer">docs.microsoft.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 10. What is the .NET Framework?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The .NET is a Framework, which is a collection of classes of reusable libraries given by Microsoft to be used in other .NET applications and to develop, build and deploy many types of applications on the Windows platform including the following:</p><ul><li>Console Applications</li><li>Windows Forms Applications</li><li>Windows Presentation Foundation (WPF) Applications</li><li>Web Applications</li><li>Web Services</li><li>Windows Services</li><li>Services-oriented applications using Windows Communications Foundation (WCF)</li><li>Workflow-enabled applications using Windows Workflow Foundation(WF)</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.c-sharpcorner.com/UploadFile/8ef97c/interview-question-on-net-framework-or-clr/" rel="noreferrer" target="_blank" title="What is the .NET Framework? Interview Questions Source To Answer">c-sharpcorner.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 11. What is the difference between .NET Core and Mono?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>To be simple:</p><ul><li>Mono is third party implementation of .Net Framework for Linux/Android/iOs</li><li>.Net Core is Microsoft's own implementation for same.</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/37738106/net-core-vs-mono" rel="noreferrer" target="_blank" title="What is the difference between .NET Core and Mono? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 12. What are some characteristics of .NET Core?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li><p><strong>Flexible deployment</strong>: Can be included in your app or installed side-by-side user- or machine-wide.</p></li><li><p><strong>Cross-platform</strong>: Runs on Windows, macOS and Linux; can be ported to other OSes. The supported Operating Systems (OS), CPUs and application scenarios will grow over time, provided by Microsoft, other companies, and individuals.</p></li><li><p><strong>Command-line tools</strong>: All product scenarios can be exercised at the command-line.</p></li><li><p><strong>Compatible</strong>: .NET Core is compatible with .NET Framework, Xamarin and Mono, via the .NET Standard Library.</p></li><li><p><strong>Open source</strong>: The .NET Core platform is open source, using MIT and Apache 2 licenses. Documentation is licensed under CC-BY. .NET Core is a .NET Foundation project.</p></li><li><p><strong>Supported by Microsoft</strong>: .NET Core is supported by Microsoft, per .NET Core Support</p></li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/26908049/what-is-net-core" rel="noreferrer" target="_blank" title="What are some characteristics of .NET Core? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 13. What is the difference between decimal, float and double in .NET?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>When would someone use one of these?</p></div></div><div><div class="AnswerBody"><p>Precision is the main difference.</p><ul><li>Float - 7 digits (32 bit)</li><li>Double-15-16 digits (64 bit)</li><li>Decimal -28-29 significant digits (128 bit)</li></ul><p>As for what to use when:</p><ul><li><p>For values which are "naturally exact decimals" it's good to use decimal. This is usually suitable for any concepts invented by humans: financial values are the most obvious example, but there are others too. Consider the score given to divers or ice skaters, for example.</p></li><li><p>For values which are more artefacts of nature which can't really be measured exactly anyway, float/double are more appropriate. For example, scientific data would usually be represented in this form. Here, the original values won't be "decimally accurate" to start with, so it's not important for the expected results to maintain the "decimal accuracy". Floating binary point types are much faster to work with than decimals.</p></li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/618535/difference-between-decimal-float-and-double-in-net" rel="noreferrer" target="_blank" title="What is the difference between decimal, float and double in .NET?  Interview Questions Source To Answer">blogs.msdn.microsoft.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 14. What's the difference between SDK and Runtime in .NET Core?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li><p>The SDK is all of the stuff that is needed/makes developing a .NET Core application easier, such as the CLI and a compiler.</p></li><li><p>The runtime is the "virtual machine" that hosts/runs the application and abstracts all the interaction with the base operating system.</p></li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/47733014/whats-the-difference-between-sdk-and-runtime-in-net-core" rel="noreferrer" target="_blank" title="What's the difference between SDK and Runtime in .NET Core? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 15. Name some CLR services?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><strong>CLR services</strong></p><ul><li>Assembly Resolver</li><li>Assembly Loader</li><li>Type Checker</li><li>COM marshalled</li><li>Debug Manager</li><li>Thread Support</li><li>IL to Native compiler</li><li>Exception Manager</li><li>Garbage Collector</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.c-sharpcorner.com/UploadFile/8ef97c/interview-question-on-net-framework-or-clr/" rel="noreferrer" target="_blank" title="Name some CLR services? Interview Questions Source To Answer">c-sharpcorner.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 16. Explain two types of deployment for .NET Core applications</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li><p><strong>Framework-dependent deployment (FDD)</strong> - it relies on the presence of a shared system-wide version of .NET Core on the target system. The app contains only its own code and any third-party dependencies that are outside of the .NET Core libraries. FDDs contain .dll files that can be launched by using the dotnet utility from the command line. </p><pre><code>dotnet app.dll</code></pre></li></ul><pre><code>* **Self-contained deployment** - Unlike FDD, a self-contained deployment (SCD) doesn't rely on the presence of shared components on the target system. All components, including both the .NET Core libraries and the .NET Core runtime, are included with the application and are isolated from other .NET Core applications. SCDs include an executable (such as app.exe on Windows platforms for an application named app), which is a renamed version of the platform-specific .NET Core host, and a .dll file (such as app.dll), which is the actual application.</code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://docs.microsoft.com/en-us/dotnet/core/deploying/index" rel="noreferrer" target="_blank" title="Explain two types of deployment for .NET Core applications Interview Questions Source To Answer">docs.microsoft.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 17. Explain what is included in .NET Core?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li><p>A .NET runtime, which provides a type system, assembly loading, a garbage collector, native interop and other basic services.</p></li><li><p>A set of framework libraries, which provide primitive data types, app composition types and fundamental utilities.</p></li><li><p>A set of SDK tools and language compilers that enable the base developer experience, available in the .NET Core SDK.</p></li><li><p>The 'dotnet' app host, which is used to launch .NET Core apps. It selects the runtime and hosts the runtime, provides an assembly loading policy and launches the app. The same host is also used to launch SDK tools in much the same way.</p></li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/26908049/what-is-net-core" rel="noreferrer" target="_blank" title="Explain what is included in .NET Core? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 18. Is there a way to catch multiple exceptions at once and without code duplication?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>Consider:</p><pre><code><span class="token cVar">try</span>
-<span class="token cBase">{</span>
-    WebId <span class="token cBase">=</span> <span class="token cVar">new</span> <span class="token class-name">Guid</span><span class="token cBase">(</span>queryString<span class="token cBase">[</span><span class="token cString">"web"</span><span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cBase">}</span>
-<span class="token cVar">catch</span> <span class="token cBase">(</span><span class="token class-name">FormatException</span><span class="token cBase">)</span>
-<span class="token cBase">{</span>
-    WebId <span class="token cBase">=</span> Guid<span class="token cBase">.</span>Empty<span class="token cBase">;</span>
-<span class="token cBase">}</span>
-<span class="token cVar">catch</span> <span class="token cBase">(</span><span class="token class-name">OverflowException</span><span class="token cBase">)</span>
-<span class="token cBase">{</span>
-    WebId <span class="token cBase">=</span> Guid<span class="token cBase">.</span>Empty<span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre><p>Is there a way to catch both exceptions and only call the <code>WebId = Guid.Empty</code> call once?</p></div></div><div><div class="AnswerBody"><p>Catch System.Exception and switch on the types:</p><pre><code><span class="token cVar">catch</span> <span class="token cBase">(</span><span class="token class-name">Exception</span> ex<span class="token cBase">)</span>            
-<span class="token cBase">{</span>                
-    <span class="token cVar">if</span> <span class="token cBase">(</span>ex <span class="token cVar">is</span> FormatException <span class="token cBase">||</span> ex <span class="token cVar">is</span> OverflowException<span class="token cBase">)</span>
-    <span class="token cBase">{</span>
-        WebId <span class="token cBase">=</span> Guid<span class="token cBase">.</span>Empty<span class="token cBase">;</span>
-        <span class="token cVar">return</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span>
+# 100 Must-Know .Net Core Interview Questions
 
-    <span class="token cVar">throw</span><span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/125319/should-using-directives-be-inside-or-outside-the-namespace" rel="noreferrer" target="_blank" title="Is there a way to catch multiple exceptions at once and without code duplication? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 19. What is Kestrel?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li>Kestrel is a cross-platform web server built for ASP.NET Core based on libuv – a cross-platform asynchronous I/O library.</li><li>It&nbsp;is a default web server pick since it is used in all ASP.NET Core templates.</li><li>It is really fast.</li><li>It is secure and good enough to use it without a reverse proxy server. However, it is still recommended that you use IIS, Nginx or Apache or something else.</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="http://www.talkingdotnet.com/asp-net-core-interview-questions/" rel="noreferrer" target="_blank" title="What is Kestrel? Interview Questions Source To Answer">talkingdotnet.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 20. What is difference between .NET Core and .NET Framework?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>.NET as whole now has 2 flavors:</p><ul><li>.NET Framework</li><li>.NET Core</li></ul><p><em>.NET Core</em> and the <em>.NET Framework</em> have (for the most part) a subset-superset relationship. .NET Core is named “Core” since it contains the core features from the .NET Framework, for both the runtime and framework libraries. For example, .NET Core and the .NET Framework share the GC, the JIT and types such as <code>String</code> and <code>List</code>.</p><p>.NET Core was created so that .NET could be open source, cross platform and be used in more resource-constrained environments.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/10448516/apache-jmeter-listener-results-interpretation" rel="noreferrer" target="_blank" title="What is difference between .NET Core and .NET Framework? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 21. What's the difference between .NET Core, .NET Framework, and Xamarin?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li><strong>.NET Framework</strong> is the "full" or "traditional" flavor of .NET that's distributed with Windows. Use this when you are building a desktop Windows or UWP app, or working with older ASP.NET 4.6+.</li><li><strong>.NET Core</strong> is cross-platform .NET that runs on Windows, Mac, and Linux. Use this when you want to build console or web apps that can run on any platform, including inside Docker containers. This does not include UWP/desktop apps currently.</li><li><strong>Xamarin</strong> is used for building mobile apps that can run on iOS, Android, or Windows Phone devices.</li></ul><p></p><div><div><div><div></div></div></div></div>
-<br><p></p><p>Xamarin usually runs on top of Mono, which is a version of .NET that was built for cross-platform support before Microsoft decided to officially go cross-platform with .NET Core. Like Xamarin, the Unity platform also runs on top of Mono.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/38063837/whats-the-difference-between-net-core-net-framework-and-xamarin" rel="noreferrer" target="_blank" title="What's the difference between .NET Core, .NET Framework, and Xamarin? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 22. What is .NET Standard?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li>.NET Standard solves the code sharing problem for .NET developers across all platforms by bringing all the APIs that you expect and love across the environments that you need: desktop applications, mobile apps &amp; games, and cloud services</li><li>.NET Standard is a set of APIs that all .NET platforms have to implement. This unifies the .NET platforms and prevents future fragmentation.</li><li>.NET Standard 2.0 will be implemented by .NET Framework, .NET Core, and Xamarin. For .NET Core, this will add many of the existing APIs that have been requested.</li><li>.NET Standard 2.0 includes a compatibility shim for .NET Framework binaries, significantly increasing the set of libraries that you can reference from your .NET Standard libraries.</li><li>.NET Standard will replace Portable Class Libraries (PCLs) as the tooling story for building multi-platform .NET libraries.</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="http://www.talkingdotnet.com/asp-net-core-interview-questions/" rel="noreferrer" target="_blank" title="What is .NET Standard? Interview Questions Source To Answer">talkingdotnet.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 23. What about NuGet packages and packages.config?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>There is no more <em>packages.config</em> file. All packages are now managed within <em>.csproj</em> file.</p><p>The <strong>.csproj</strong>&nbsp;file has been cleaned up and it also serves the role of packages.config(or package.json for Node devs). That means that’s where your packages and versions will be saved.</p><p>NuGet packages are the unit of reference and they can depend on other NuGet packages, but also they can depend on projects. And as before, projects can also depend on NuGet packages and other projects. That means that projects and NuGet packages are interchangeable.</p><p>With .NET Core, you can easily turn your projects into NuGet packages, with one click inside of the properties.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://codingblast.com/asp-net-core-interview-questions/" rel="noreferrer" target="_blank" title="What about NuGet packages and packages.config? Interview Questions Source To Answer">codingblast.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 24. Talk about new .csproj file?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><em><strong>.csproj</strong></em> file is now used as a place where we manage the NuGet packages for your application.</p><p>File explorer and project explorer are now in sync. For .NET Core projects, you can easily drop a file from file explorer into a project or delete it from the file system and it will be gone from the project. No more source files in<strong>&nbsp;a .csproj</strong>&nbsp;file.</p><p>You can now edit the&nbsp;<strong>.csproj</strong>&nbsp;file directly without unloading the project.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://codingblast.com/asp-net-core-interview-questions/" rel="noreferrer" target="_blank" title="Talk about new .csproj file? Interview Questions Source To Answer">codingblast.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 25. Why to use of the IDisposable interface?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The "primary" use of the <code>IDisposable</code> interface is to clean up unmanaged resources. Note the purpose of the Dispose pattern is to provide a mechanism to clean up both <em>managed</em> and <em>unmanaged</em> resources and when that occurs depends on how the Dispose method is being called. </p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/538060/proper-use-of-the-idisposable-interface" rel="noreferrer" target="_blank" title="Why to use of the IDisposable interface? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 26. What does Common Language Specification (CLS) mean?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The <strong>Common Language Specification (CLS)</strong> is a fundamental set of language features supported by the Common Language Runtime (CLR) of the .NET Framework. CLS is a part of the specifications of the .NET Framework. CLS was designed to support language constructs commonly used by developers and to produce verifiable code, which allows all CLS-compliant languages to ensure the type safety of code. CLS includes features common to many object-oriented programming languages. It forms a subset of the functionality of common type system (CTS) and has more rules than defined in CTS.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.techopedia.com/definition/25318/common-language-specification-cls-net" rel="noreferrer" target="_blank" title="What does Common Language Specification (CLS) mean? Interview Questions Source To Answer">techopedia.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 27. Explain the difference between Task and Thread in .NET</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li><p><strong>Thread</strong> represents an actual OS-level thread, with its own stack and kernel resources.  Thread allows the highest degree of control; you can Abort() or Suspend() or Resume() a thread, you can observe its state, and you can set thread-level properties like the stack size, apartment state, or culture. ThreadPool is a wrapper around a pool of threads maintained by the CLR.</p></li><li><p>The <strong>Task class</strong> from the Task Parallel Library offers the best of both worlds. Like the ThreadPool, a task does not create its own OS thread. Instead, tasks are executed by a TaskScheduler; the default scheduler simply runs on the ThreadPool. Unlike the ThreadPool, Task also allows you to find out when it finishes, and (via the generic Task) to return a result. </p></li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/13429129/task-vs-thread-differences" rel="noreferrer" target="_blank" title="Explain the difference between Task and Thread in .NET Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 28. Explain the difference between “managed” and “unmanaged” code?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li><p><strong>Managed</strong> code is not compiled to machine code but to an intermediate language which is interpreted and executed by some service on a machine and is therefore operating within a (hopefully!) secure framework which handles dangerous things like memory and threads for you. It runs on the CLR (Common Language Runtime), which, among other things, offers services like garbage collection, run-time type checking, and reference checking. So, think of it as, "My code is <em>managed</em> by the CLR."</p></li><li><p><strong>Unmanaged code</strong> is compiled to machine code and therefore executed by the OS directly. It therefore has the ability to do damaging/powerful things Managed code does not. This is how everything used to work, so typically it's associated with old stuff like .dlls</p></li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/3563870/difference-between-managed-and-unmanaged" rel="noreferrer" target="_blank" title="Explain the difference between “managed” and “unmanaged” code? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 29. What is CoreCLR?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>CoreCLR is the .NET execution engine in .NET Core, performing functions such as garbage collection and compilation to machine code. </p><p>Consider:
-</p><div><div><div><div></div></div></div></div><p></p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://blogs.msdn.microsoft.com/dotnet/2015/02/03/coreclr-is-now-open-source/" rel="noreferrer" target="_blank" title="What is CoreCLR? Interview Questions Source To Answer">blogs.msdn.microsoft.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 30. What is JIT compiler?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>Before a computer can execute the source code, special programs called compilers must rewrite it into machine instructions, also known as object code. This process (commonly referred to simply as “compilation”) can be done explicitly or implicitly.</p><p>Implicit compilation is a two-step process:</p><ul><li>The first step is converting the source code to intermediate language (IL) by a language-specific compiler. </li><li>The second step is converting the IL to machine instructions. The main difference with the explicit compilers is that only executed fragments of IL code are compiled into machine instructions, at runtime. The .NET framework calls this compiler the <strong>JIT (Just-In-Time) compiler</strong>.</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.telerik.com/blogs/understanding-net-just-in-time-compilation" rel="noreferrer" target="_blank" title="What is JIT compiler? Interview Questions Source To Answer">telerik.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 31. What is the difference between .NET Standard and PCL (Portable Class Libraries)?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 32. What is Explicit Compilation?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 33. What are the benefits of explicit compilation?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 34. What is the difference between Class Library (.NET Standard) and Class Library (.NET Core)?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 35. What's is BCL?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 36. When should we use .NET Core and .NET Standard Class Library project types?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 37. What is implicit compilation?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 38. What is FCL?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 39. Does .NET support multiple inheritance?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 40. What is the difference between .NET Framework/Core and .NET Standard Class Library project types?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 41. What's the difference between RyuJIT and Roslyn?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 42. What is the difference between AppDomain, Assembly, Process, and a Thread?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 43. What is the difference between CIL and MSIL (IL)?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 44. Why does .NET Standard library exist?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 45. Explain how does Asynchronous tasks (Async/Await) work in .NET?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 46. Why does .NET use a JIT compiler instead of just compiling the code once on the target machine?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 47. What are benefits of using JIT?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 48. How to choose the target version of .NET Standard library?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 49. What is the difference between Node.js async model and async/await in .NET?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 50. Explain Finalize vs Dispose usage?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 51. How many types of JIT Compilations do you know?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 52. Could you name the difference between .Net Core, Portable, Standard, Compact, UWP, and PCL?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/netCore-interview-questions">all 52 answers</a></div> <br><br></div> <div data-v-5e9078c0="" class="end"></div> <br data-v-5e9078c0="">
-    Thanks 🙌 for reading and good luck on your next tech interview!
-    <br data-v-5e9078c0="">
-    Explore 3800+ dev interview question here 👉
-    <a data-v-5e9078c0="" href="https://devinterview.io/">Devinterview.io</a></div>
+<div>
+<p align="center">
+<a href="https://devinterview.io/questions/web-and-mobile-development/">
+<img src="https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/github-blog-img%2Fweb-and-mobile-development-github-img.jpg?alt=media&token=1b5eeecc-c9fb-49f5-9e03-50cf2e309555" alt="web-and-mobile-development" width="100%">
+</a>
+</p>
+
+#### You can also find all 100 answers here 👉 [Devinterview.io - .Net Core](https://devinterview.io/questions/web-and-mobile-development/net-core-interview-questions)
+
+<br>
+
+## 1. What is _.NET Core_ and how does it differ from the _.NET Framework_?
+
+**.NET Core** and **.NET Framework** are both ecosystem variations developed by Microsoft. They share similar libraries, syntax and core components, yet have distinctive characteristics and purposes.
+
+### Key Distinctions
+
+#### Dependency on Operating System
+
+   **.NET Core** is built to fluctuate across operating systems, providing reliability from Windows, macOS, and Linux.
+
+   **.NET Framework's** exclusive residence is on Windows.
+
+#### Deployment Mechanisms
+
+   For **.NET Framework**, components are distributed through a Global Assembly Cache (GAC).
+
+   In contrast, **.NET Core** utilizes its open-source library format. All essential dependencies are gathered during the runtime of the hosting system.
+
+#### Stack Structures
+
+   **.NET Core** is modular in design, permitting you to streamline the allocation of resources. This means that resources from .NET Core can be combined with resources from other packages or your code, and any unused resources will be left out of the final deployment.
+
+   **.NET Framework** resources are all-inclusive. Every application constructed within the .NET Framework will use the complete stack of associated resources.
+
+#### API Accessibility
+
+   **.NET Core** highlights a subset of libraries accessible across all operating systems. This ensures consistent performance among various platforms.
+
+   On the contrary, **.NET Framework** provides in-depth access to exclusive Windows APIs, which might not resonate well with non-Windows platforms.
+
+
+### Targets and Use-Case Scenarios
+
+#### .NET Core-Based Projects
+
+- Cloud-First Deployments: Given its lightweight factor, numerous platforms host applications from **.NET Core**.
+- Applications involving containers: **.NET Core** is particularly suitable, bearing its minimalistic resource usage.
+- Web-based applications: **.NET Core** is a strong contender due to its inbuilt support for client-server architectures and cloud-based applications.
+
+#### .NET Framework-Based Projects
+
+- Long-Running Applications: Applications with consistent and prolonged operational times will significantly benefit from using **.NET Framework**.
+- Established Windows-centric applications: **.NET Framework** still reigns as the preferred choice, especially for applications deeply embedded within Windows ecosystems or those leveraging platforms such as Silverlight or WPF.
+- Specific APIs: If your application necessitates specialized Windows APIs that aren't accommodated by **.NET Core**, **.NET Framework** remains the ultimate choice.
+<br>
+
+## 2. Describe the cross-platform capabilities of _.NET Core_.
+
+**.NET Core** is a framework for developing cross-platform applications.
+
+### Key Cross-Platform Features
+
+- **Libraries**: Provides a consistent set of libraries across operating systems. Developers can use these libraries seamlessly, ensuring that functions work consistently across environments.
+
+- **Runtime Environment**: .NET Core applications are run using a runtime environment that adapts to the underlying system. The runtime handles critical tasks like memory management and garbage collection.
+
+- **Cross-Platform Support**: Code written using .NET Core runs on various operating systems without modifications. This allows developers to target a broad range of devices and environments.
+
+- **Platform-Dependent Code Paths**: In some cases, developers may need to differentiate between OS variants. .NET Core offers mechanisms for handling platform-specific code, enabling conditional execution.
+
+- **NuGet Packages and Package Management**: .NET Core supports NuGet packages, simplifying the inclusion of third-party libraries. It helps ensure that dependencies are resolved consistently, regardless of the target system.
+
+- **Code Execution**: .NET Core supports multiple development idioms, including Just-In-Time (JIT) compilation and ahead-of-time (AOT) compilation. These features enable code execution tailored to the system, optimizing performance.
+<br>
+
+## 3. What are the main components of the _.NET Core architecture_?
+
+The architecture of the .NET Core platform revolves around modularity, flexibility, and platform independence.
+
+### Key Components of .NET Core
+
+#### Core Features
+
+- **Framework and BCL**: The BCL (Base Class Library) provides fundamental classes and types, while the Core Framework encompasses core libraries and runtime services.
+  
+- **Garbage Collector**: The GC in .NET Core ensures automatic memory management by alleviating developers from manual memory cleanup, thus minimizing memory leaks and memory management issues.
+
+- **Just-in-Time (JIT) Compiler**: .NET Core translates Intermediate Language (IL) code into machine code, enabling cross-platform execution.
+  
+- **Multi-level Compilation**: .NET Core employs both on-demand **JIT** compilation and **Ahead-of-Time (AOT)** compilation for specific scenarios.
+
+- **Portable PDB Format**: This component simplifies debugging across different environments.
+
+- **Exception Handling and Stack Trace Mechanism**: These built-in mechanisms aid in robust error handling and debugging.
+
+- **Native Interoperability (P/Invoke)**: .NET Core interacts with native code such as DLLs using the P/Invoke mechanism.
+
+- **Build and Packaging Tools**: .NET Core's build and packaging mechanisms streamline deployment to various platforms.
+
+#### Tools and Interfaces
+
+- **CLI**: The Command-Line Interface offers a powerful, text-based toolset for building, managing, and deploying .NET Core applications.
+
+- **Global Tooling Management**: This system facilitates the installation and lifecycle management of global .NET Core tools.
+
+#### Execution Environments
+
+- **.NET Core Application Host**: This component hosts and manages the execution of .NET Core applications.
+
+- **Operating System Abstraction**: .NET Core provides a unified set of APIs for interacting with the underlying operating system, ensuring consistency across platforms.
+
+- **Cross-Platform Compatibility Layer**: This layer simplifies multi-platform development by streamlining interactions between the application and various operating systems.
+
+#### Libraries and Dependencies
+
+- **NuGet Package Manager**: The default package manager for .NET Core simplifies the acquisition and management of third-party libraries.
+
+- **.NET Core-specific NuGet Packages**: These packages are tailored for the .NET Core ecosystem.
+
+- **.NET Standard Libraries**: These are a consistent set of APIs shared across .NET platforms.
+
+- **Project References and NuGet Dependency Management**: These tools streamline library dependencies within .NET projects.
+
+#### Compiler and Build Toolset
+
+- **.NET Compiler Platform (Roslyn)**: Roslyn serves as the C# and Visual Basic compiler system, providing dynamic code analysis and transformation capabilities.
+
+- **MSBuild**: This build engine offers comprehensive control over the build process and is notable for its project-file-based build configuration.
+
+- **NuGet Package Restoration**: The .NET tooling automatically restores **NuGet** packages for a project as part of the build process.
+
+#### Containers and Microservices
+
+- **Docker Support**: .NET Core applications can be containerized using Docker for portability and consistency across diverse environments.
+
+#### Network Integration
+
+- **HTTP Components**: .NET Core has a range of HTTP-related tools, including an embedded web server, support for SSL, and client-side HTTP capabilities.
+
+- **WebSocket Support**: The platform supports WebSockets for efficient, bi-directional communication.
+
+#### Data Persistence and Management
+
+- **Entity Framework Core**: As the object-relational mapper (ORM) of choice for .NET Core, this component simplifies database interactions.
+
+- **Data Provider Abstraction**: .NET Core abstracts database providers, allowing applications to work with different databases without extensive modifications.
+
+- **Data Access and Querying Tools**: It offers various methods for robust data access and querying, such as LINQ and ADO.NET.
+
+- **In-memory Data Storage**: For transient data storage requirements, .NET Core provides in-memory data storage capabilities.
+
+- **File I/O and Storage Integration**: The platform includes robust file-handling utilities.
+
+#### Security and Cryptography
+
+- **Authentication and Authorization Frameworks**: .NET Core offers features for secure user and service authentication and authorization.
+
+- **Cryptography Services**: It provides a suite of cryptographic tools for secure data handling.
+
+- **Code Access Security (CAS)**: This component defends against potential security vulnerabilities by controlling code execution.
+
+#### Text and Localization
+
+- **Text Manipulation Utilities**: .NET Core includes a plethora of text-related tools, like string manipulation methods and string encoding controls.
+
+- **Globalization and Localization Components**: These components aid in the management of region-specific and multilingual applications.
+
+#### UI and Presentation
+
+- **Presentation Frameworks**: .NET Core provides frameworks for constructing diverse graphical user interfaces.
+
+- **ASP.NET Core for Web Applications**: This web framework is tailored for building modern web applications and services.
+
+- **Blazor for Web Applications**: This innovative web development framework allows for client-side applications with C#.
+
+- **WPF, WinForms, and Universal Windows Platform (UWP)**: These established frameworks enable desktop and Windows-specific application development.
+
+- **Gtk# for Cross-Platform Desktop Applications**: This component provides a set of .NET bindings for the GTK+ toolkit.
+
+- **Mobile-Specific Frameworks**: For mobile application development, .NET Core integrates with Xamarin.
+<br>
+
+## 4. Explain the _.NET Core CLI_ and its primary functions.
+
+Let's look at the **.NET Core CLI** and its primary operations: **new**, **build**, **publish**, **run**, **test**.
+
+### New
+
+The **new** command initializes a new .NET project using a specific template. You can choose from project types like console applications, web applications, class libraries, and more.
+
+### Build
+
+With the **build** command, you can compile your source code into an executable format or a library. It also resolves project dependencies and creates an assembly.
+
+### Publish
+
+The **publish** command gathers necessary components for an application, like the .NET Core runtime, and **prepares it for deployment**. This ensures the target machine has the relevant runtime and runtime components.
+
+### Run
+
+The **run** command simplifies the process of executing your application. It does this by **combining building and execution tasks** into a single, more straightforward step.
+
+### Test
+
+Use the **test** command to execute tests in the project. The .NET Core Test Explorer, VS Code, or Continuous Integration (CI) systems like Azure Pipelines or Jenkins can also run these tests.
+
+### Simplified Workflow
+
+These CLI commands simplify the development process. You can transition from creating a new project to building, testing, and running it, all from the command line. These commands save time and make development more efficient.
+<br>
+
+## 5. How do you create a new _.NET Core project_ using the _CLI_?
+
+To create a new **.NET Core** project using the command line:
+
+### Step 1: Install the .NET Core SDK
+
+If you haven't already, install the **.NET Core SDK**. This provides the necessary **tools** and **libraries** for developing in .NET.
+
+### Step 2: Run the `dotnet new` Command
+
+Use the `dotnet new` command to **create** a new .NET Core project. This command offers various **project templates**, such as for web APIs, console applications, and more.
+
+Here is the syntax:
+
+```bash
+dotnet new <TEMPLATE_NAME> [-n <PROJECT_NAME>] [-o <OUTPUT_DIRECTORY>]
+```
+
+- Substitute **`<TEMPLATE_NAME>`** with the desired project template like `console`, `webapi`, `mvc`, etc.
+- Optionally, set a **`<PROJECT_NAME>`** and an **`<OUTPUT_DIRECTORY>`**.
+
+### Example: Running `dotnet new` to Create a Console App
+
+Use the following command:
+
+```bash
+dotnet new console -n MyConsoleApp -o MyConsoleAppDir
+```
+
+- **TEMPLATE_NAME**: `console`
+- **PROJECT_NAME**: `MyConsoleApp`
+- **OUTPUT_DIRECTORY**: `MyConsoleAppDir`
+
+This will create a new **console application project** with the name `MyConsoleApp` and place it in the `MyConsoleAppDir` folder.
+<br>
+
+## 6. Discuss the purpose and use of a `csproj` file in a _.NET Core project_.
+
+The **C# project file** (`*.csproj`) serves as a **configuration manifest** for .NET Core projects, providing a wealth of options for customizing your build process, declaring project dependencies, and adjusting compiler settings.
+
+The `csproj` file is based on the more general `msbuild` format and has had several iterations as new features are introduced.
+
+### Key Elements
+
+#### Directives for .NET Targeting
+
+- **Target Framework**: Defines the version and profile of the .NET runtime you're targeting. For multi-platform projects like Xamarin, it can differentiate between platforms.
+
+- **Type of Output File**: It is usually a .dll or .exe file.
+
+#### Building and Debugging Configuration
+
+- **Output Type**: Selects the kind of .NET assembly produced.
+- **Debug Symbols Generation**: Decide whether to create debug symbols for better debuggability.
+
+#### Sources Organization
+
+- **Source Files**: Provides a list of source files to be included in the project.
+
+- **Resources**: Offers a way to incorporate non-code files like images or text files.
+
+#### Compiling Directives
+
+- **Conditional Compiles**: Conditional symbols can be set to determine which part of the code gets compiled.
+
+- **Option to Treat Warnings as Errors**: Warnings can be forced to be treated as errors.
+
+- **Optimizations**: You can control whether the compiler optimizes your code for a fast build or a smaller assembly.
+
+#### Dependencies Management
+
+- **Core Assemblies Membership**: The project lists the essential .NET Core assemblies it depends on.
+
+- **NuGet and Direct Dependencies**: The file signals dependencies through multiple methods, helping the framework to acquire necessary packages.
+
+- **Framework Assemblies**: It can include or exclude assemblies that are part of the .NET Core library.
+
+- **Private Library Folder**: It lets you specify a location to search for libraries not on NuGet.
+
+#### Customization Through Directives
+
+-  **Custom Tasks**: This feature allows you to run custom tasks as part of the build process.
+
+- **Event-Based Integration**: In some cases, you might want to execute custom actions during specific build events (like "BeforeBuild" or "AfterRebuild").
+
+#### Project Settings
+
+- **Project Type**: It distinguishes between different types of projects like web applications or class libraries.
+
+- **Default Namespace**: You can set a default namespace for classes created in the project.
+
+#### Code Analysis and Best Practices
+
+- **Code Style Rules**: By setting various style rules, you can enforce a consistent coding style in all the projects throughout your solution.
+
+- **Docs and Localization**: It supports inclusion of documentation and localization files.
+
+#### Cross-Platform Considerations
+
+- **Mono and .NET Compact Framework**: It enables developers to target platforms based on Mono or the .NET Compact Framework.
+
+- **Cross-Platform Execution**: For different platform targets or compatibility modes, the setting ensures the correct execution of the project.
+
+### .NET Core SDK Versioning and Evolution
+
+The `.csproj` underwent significant simplifications in conjunction with the release of .NET Core 3.0, aiming to streamline project file definitions and make them more standardized and modular across project types.
+
+Through continuous updates and community feedback, the project file remains central to the management and orchestration of .NET Core projects.
+<br>
+
+## 7. What is the _runtime_ and _SDK_ in _.NET Core_?
+
+The **.NET Core** framework is a versatile, modular platform for developing cross-platform applications. It delivers its core libraries, tools, and runtime as an integrated package.
+
+### Two Essential Components
+
+1. **.NET Core Runtime**: This environment is necessary for executing .NET Core applications. It's typically distributed as a single deployable unit, ensuring that applications are self-contained and alleviating the need for separately installed .NET runtimes.
+
+2. **.NET Core SDK**: Integrating essential tools like the compiler, NuGet package manager, and MSBuild, the SDK empowers developers to build, test, and publish applications. Its comprehensive suite of libraries and APIs supports development across a range of applications and industries.
+
+### Compatibility Considerations
+
+The version of the .NET Core runtime specifies the advertised **API compatibility level** and **previously introduced feature sets**.
+
+Developers outline any framework version dependencies in their applications through the use of the `<TargetFramework>` element in the project file.
+
+### Code Example: Project File with Target Framework
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>
+```
+
+### Managing Multiple .NET Core Versions
+
+The .NET Core SDK provides a command-line tool, `dotnet`, which enables you to monitor various installed versions and switch between them seamlessly. Use the `global.json` file in your project to fix the specific SDK version for your project or a range of projects.
+
+### Code Example: Global.json
+
+```json
+{
+  "sdk": {
+    "version": "3.1.402"
+  }
+}
+```
+<br>
+
+## 8. How would you manage different versions of the _.NET Core SDK_ on the same machine?
+
+You can use **`global.json`** files and specify the version of the .NET SDK you wish to target within a project. When you run `.net build` or `.net run` in a directory that contains a global.json file, the SDK version specified in that file takes precedence over any other installed versions.
+
+Here is a code snippet showing how to write a `global.json` file:
+
+```json
+{
+  "sdk": {
+    "version": "2.1.402"
+  }
+}
+```
+<br>
+
+## 9. What is the purpose of the `global.json` file?
+
+The `global.json` file in a .NET Core project defines the version of the SDK used and allows for **multi-project management**.
+
+It also assists with:
+
+- **Managing SDK Versions**: By setting the `sdk` field to a specific version, you ensure consistent behavior across development environments and CI/CD pipelines. Additionally, the `allowPrerelease` flag gives you control over using preview versions.
+
+- **Setting Default Paths for Global Packages and Tools**: The `packageManagement` and `tools` fields can be helpful in specifying directory paths for global tools and packages. This can simplify configuration on new machines or during deployment. For instance, you can use it to set up the same configuration across machines of your team.
+
+- **Coordinating Multi-Project Solutions**: A `global.json` file helps manage **consistent SDK versions and ensures that inter-related projects within a solution are either using the same version or compatible ones. This coordination is essential for projects that *depend* on each other, especially in a CI/CD environment.
+
+### Global SDK vs. Local SDK
+
+The SDK version specified in the `global.json` usually supersedes the locally installed SDK version unless the local version is explicitly pinned, or there's a higher priority, such as in a project-specific `global.json` file.
+
+**When shared**, the `global.json` settings apply to all projects within its directory and those in subdirectories unless they have their own `global.json` files, which would then take precedence.
+
+**If you're pushing software to production**, always account for SDK versions and set up your CI/CD pipelines accordingly. For consistency and to guard against unintended version updates, you should generally specify the SDK versions in your build configurations, rather than relying solely on the local environment of the build agent or developer machines.
+<br>
+
+## 10. Can you explain the _Directory Structure_ of a typical _.NET Core project_?
+
+The directory structure of a typical .NET Core project is designed to keep code organized and manageable.
+
+### Key Directories
+
+- **src**: Contains the core application and all of its modules.
+
+- **tests**: Houses unit, integration, or end-to-end test projects.
+
+- **docs**: For documentation files.
+
+- **artifacts**: Not always present, but used for build outputs (e.g., binaries).
+
+- **build**: For build-related scripts or files.
+
+- **.github**: GitHub-specific files like workflows or issue templates.
+
+- **.vscode**: Configurations specific to Visual Studio Code.
+
+### Core Files
+
+- **global.json**: Might specify the version of the .NET SDK to use.
+  
+- **.gitignore**: Lists files and folders to exclude from version control.
+  
+- **.editorconfig**: Gives project-wide text editor settings.
+  
+- **.wslconfig**: This is an optional file which you can create to configure the Windows Subsystem for Linux
+
+- **Dockerfile**: If the project uses Docker, this defines the container.
+
+- **Makefile**: Optional file used to automate tasks on Unix-based systems.
+
+### Build-Related Files
+
+- **.editorconfig**: Provides consistent coding styles for multiple developers working across various editors and IDEs.
+
+- **global.json**: Helps specify the SDK version used for the project.
+
+- **MyApp.sln**: Solution file associated with Visual Studio, listing project dependencies and configurations.
+
+- **nuget.config**: Configures NuGet package sources.
+
+- **local-mira-tool.manifest**: Specifies the version targeted by Mira, a cross-platform CLI.
+
+### Dynamic/Generated Files
+
+- **appsettings.json**: JSON configuration file translated to `Configuration` objects.
+
+- **appsettings.Development.json**: App-specific data for the Development environment.
+
+- **appsettings.Production.json**: Environment-specific data for the Production environment.
+
+- **MyApp.deps.json**: Dependency details.
+
+- **MyApp.runtimeconfig.json**: Runtime-related information like shared frameworks and native libraries.
+
+### Version Control
+
+- **.git**: Git repository.
+
+- **.gitattributes**: Used to customize how versions of files should be handled.
+
+- **.gitignore**: Lists files and folders to be excluded from version control.
+<br>
+
+## 11. How do you add and manage _NuGet packages_ in a _.NET Core project_?
+
+Working with **NuGet** in a **.NET Core** project is seamless, thanks to Visual Studio and the dotnet CLI. Whether you're a fan of the GUI or prefer command-line superiority, you can manage NuGet packages without breaking a sweat.
+
+### Using NuGet Package Manager UI
+
+1. **Locate NuGet Package Manager**:
+   - In Visual Studio, access it via `Project > Manage NuGet Packages...`.
+
+2. **Browse for Packages**:
+   - Look for packages in the NuGet.org online repository under the "Browse" tab.
+
+3. **Install Packages**:
+   - Click "Install" for the desired package.
+
+4. **Verify Installations**:
+   - Check the "Installed" tab to see the installed packages.
+
+#### Useful Tips
+
+- **Version Management**: Click on the installed package to see other available versions.
+  
+- **Updating Packages**: Navigate to the "Updates" tab to see which packages have newer versions.
+
+- **Uninstalling**: Use the "Installed" tab to remove packages.
+
+### Managing Packages via .NET CLI
+
+Use the `dotnet add package` and `dotnet remove package` commands.
+
+#### Syntax
+
+- **Add Package**:
+  ```bash
+  dotnet add package PackageName
+  ```
+- **Remove Package**:
+  ```bash
+  dotnet remove package PackageName
+  ```
+
+- **Update Package**:
+  ```bash
+  dotnet add package PackageName --version 1.2.3
+  ```
+
+
+#### Using Private Feeds
+
+- **Configuring**: In `nuget.config`, define the source, or use `-s`/`--source` in the CLI. E.g.:
+  ```bash
+  dotnet add package CompanyPackage --source https://NuGetServer.com/nuget/MyPrivateFeed/
+  ```
+
+  **Authentication**: For authenticated feeds, use `.config` files or `-k`/`--api-key` along with the command.
+
+
+### Using NuGet.Config
+
+- **Creating**: Use the `new` command to create a config file in your solution folder:
+  ```bash
+  dotnet new nugetconfig
+  ```
+
+- **Configuring Sources**: With the `add source`  command:
+  ```bash
+  dotnet nuget add source https://AnotherFeed.com/v3/index.json --name AnotherFeed
+  ```
+
+  And to remove a source:
+  ```bash
+  dotnet nuget remove source AnotherFeed
+  ```
+
+- **Setting Default Push Source**: Utilize the `push` command:
+  ```bash
+  dotnet nuget push -t API_KEY MyPackage.1.0.0.nupkg
+  ```
+  Use the `-s`/`--source` switch to specify the desired push source.
+
+### Docker and NuGet
+
+To use a cache layer when adding packages in a Docker container, first retrieve and add the `.csproj` file to the container before executing the `dotnet restore` command. This approach speeds up the build process.
+
+#### Dockerfile Example
+
+```Dockerfile
+# Copy .csproj and nuget.config and restore as distinct layers
+COPY nuget.config ./
+COPY Orcha.csproj ./
+RUN dotnet restore
+```
+<br>
+
+## 12. Explain the role of the _NuGet package manager_.
+
+The **NuGet Package Manager** simplifies the process of integrating external libraries and components into your project. It's a core element in the Microsoft toolchain and is closely integrated with .NET Core, Visual Studio, and Visual Studio Code.
+
+### Key NuGet Package Manager Capabilities
+
+1. **Package Management**: NuGet serves as a centralized repository for .NET packages, where developers can easily search, discover, and install packages.
+
+2. **Dependency Management**: NuGet tracks and resolves dependencies between packages, ensuring that all required components are downloaded and installed.
+
+3. **Version Control**: Different versions of the same package are maintained, giving developers flexibility in choosing the most suitable one for their project.
+
+4. **Project Scopes**: NuGet allows you to define packages at various levels such as the global package store, the project-local store, or as a package reference within a project file.
+
+5. **Commands via CLI**: Besides GUI integration, NuGet supports a powerful command-line interface for streamlined package management.
+
+6. **Publishing Packages**: It facilitates package creators in distributing their libraries to the global NuGet repository for wider consumption.
+
+7. **Extensibility**: NuGet allows for easy management of third-party tools and integrations, beyond just code libraries.
+
+### NuGet in Action: A Simple Example
+
+Here is what you should do:
+
+- In Visual Studio, open a .NET Core project.
+- Right-click on the project in the Solution Explorer and choose "Manage NuGet Packages".
+- Click on "Browse" and search for "Newtonsoft.Json", a commonly used JSON parsing library.
+- Click "Install" to add the package to your project.
+
+This will modify your project file, adding a `<PackageReference>` to `Newtonsoft.Json` and any of its dependencies.
+<br>
+
+## 13. Describe the process of _publishing a .NET Core application_.
+
+When publishing a **.NET Core application**, you compile it and its dependencies for deployment. .NET Core supports various publishing methods and configurations to cater to your specific requirements.
+
+### Various Publishing Methods
+
+1. **Framework-Dependent**: Publishes the app without the .NET Core runtime. It indicates which version to use on the target system. The app will only run on systems with matching or newer .NET Core runtimes.
+
+2. **Self-Contained**: Packages the app with the .NET Core runtime, allowing it to run on systems without an existing .NET Core installation.
+
+3. **Portable**: Typically suitable for use-cases like USB flash or external drives.
+
+4. **Ready-To-Run**: Optimizes the app startup time by pre-compiling specific libraries to native code. RTR has the added benefit of being useful for promoting cross-gen and unification common. Thus, **RTR Is the default for these modes vs traditional JIT**.
+
+### Publishing Commands
+
+The Dotnet Command Line produces build artifacts onto the file system. 
+
+- **dotnet build** compiles the app.
+- **dotnet publish** copies necessary files to a target path, to make it ready for deployment.
+
+### Project Files for Publishing
+
+The following configuration settings can be specified in your project file to influence the publish process:
+
+- **PublishWithAspNetCoreTargetManifest**: For web apps, this setting specifies whether the app should be published with or without an AspNetCore target manifest.
+
+- **PublishTrimmed**: When set to 'true', minimizes the number of assemblies included in the published output based on necessary. This improves performance & size.
+
+
+
+An example DOTNET CLI command for publishing a self-contained app would look like this:
+
+```sh
+dotnet publish -c Release --self-contained --runtime linux-x64
+```
+
+And for ready-to-run (RTR), it would be:
+
+```sh
+dotnet publish -c Release --runtime linux-x64 --self-contained false --output rtr/path
+```
+
+When the **Ready-To-Run** is specified, the `--self-contained` and `--output` are disabled.
+
+For deploying to Linux or Windows in **framework-dependent** mode:
+
+
+
+```sh
+dotnet publish -c Release --runtime linux-x64
+```
+
+```sh
+dotnet publish -c Release --runtime win-x64
+```
+
+### Repositories, NuGet & Web
+
+
+
+-  **Repository**: Useful for sharing the project's source code publicly. Code hosting platforms such as GitHub, GitLab or Bitbucket support repository management.
+  
+- **NuGet Package**: Ideal for publishing libraries as it simplifies their consumption. Once you've published a library to NuGet, others can include it as a dependency in their projects.
+  
+-  **Web Host**: For web applications and services, hosting them with a web server is essential.  When you deploy to a web server, ensure your web.config file is correctly configured for its needs. Additionally, when using Kestrel, ensure it's accessible through a proxy server.
+<br>
+
+## 14. What is a _.NET Standard_ and how does it relate to _.NET Core_?
+
+**.NET Standard** serves as a formalized set of APIs, ensuring cross-compatibility among different .NET implementations. Essentially, it is a standardized interface that abstracts from the underlying platform.
+
+### Motivation for .NET Standard
+
+Before .NET Standard, developers had to detect and account for the specific platform they were targeting, such as UWP or different versions of .NET Framework. This diversity resulted in interoperability challenges.
+
+By establishing a standardized target across .NET implementations, **.NET Standard** simplifies multi-platform development, making it more cohesive and intuitive.
+
+### Evolution of Development Platforms
+
+While '.NET Core' and '.NET Framework' cater to specific use cases, **.NET Standard** essentially aims for cross-compatibility. As of 2020, Microsoft advocated for using '.NET Core' for newer projects.
+
+Here is the overview:
+
+- **.NET Framework**: It's a mature, all-in-one development platform for Windows-based applications.
+- **.NET Core**: A streamlined, open-source platform shattering Windows allegiance, targeting both Windows and non-Windows systems.
+- **.NET 5**: A unification of ".NET Core" and ".NET Framework".
+- **.NET 6 **: The next leap, evolving further from ".NET 5".
+
+Given this diverse landscape, **.NET Standard** acts as an umbrella platform with defined capabilities and APIs, ensuring consistent behavior across different .NET implementations.
+<br>
+
+## 15. How do you create a _class library_ in _.NET Core_?
+
+To create a **Class Library** in .NET Core, you can use either Visual Studio or the `dotnet` command-line interface.
+
+### Using Visual Studio
+
+- Open Visual Studio.
+- Select "Create a new project".
+- Choose the "Class Library" template under the "C#" or appropriate language heading.
+- Specify the project name and location.
+- Click "Create".
+
+### Using the .NET CLI
+
+1. **Create the Project**: Open a terminal and navigate to the desired directory. Run the following command:
+
+   ```bash
+   dotnet new classlib -n MyLibrary
+   ```
+
+   Replace `MyLibrary` with your preferred project name.
+
+The above command will generate a `.csproj` file, which is the project file for the class library.
+
+2. **Configure the Project Reference**:
+
+   You can either manually add the reference or use the `dotnet add reference` command. Manually, you would do this editing the `.csproj` file:
+
+   ```xml
+   <ItemGroup>
+       <ProjectReference Include="..\Path\To\AnotherProject.csproj" />
+   </ItemGroup>
+   ```
+
+   Using the command line:
+
+   ```bash
+   dotnet add reference ..\Path\To\AnotherProject.csproj
+   ```
+
+   This connects your class library to your other projects or external libraries.
+
+### Visual Studio Code
+
+You can create a class library in Visual Studio Code using the .NET CLI. Here is how:
+
+1. **Initialize the Project Folder**:
+
+   Open the terminal in the desired directory and run:
+
+   ```bash
+   dotnet new sln -n MySolution
+   ```
+
+   Replace `MySolution` with your preferred name.
+
+2. **Create the Library Project**:
+
+   Run the following commands in the terminal:
+
+   ```bash
+   dotnet new classlib -n MyLibrary -o MyLibrary
+   ```
+
+   This creates a new directory named `MyLibrary` and initializes it as a class library.
+
+3. **Add the Library to the Solution**:
+
+   To include the library in the solution, run:
+
+   ```bash
+   dotnet sln add MyLibrary/MyLibrary.csproj
+   ```
+
+4. **Link to Other Projects or Libraries**:
+
+   You can **add a project reference**:
+
+   ```bash
+   dotnet add reference ..\Path\To\AnotherProject.csproj
+   ```
+
+   Or **add a package reference**:
+
+   ```bash
+   dotnet add package MyPackage
+   ```
+
+5. **Build the Solution**:
+
+   To ensure everything is linked up correctly, build the solution with:
+
+   ```bash
+    dotnet build
+   ```
+
+   The class library and any linked projects should build without errors.
+<br>
+
+
+
+#### Explore all 100 answers here 👉 [Devinterview.io - .Net Core](https://devinterview.io/questions/web-and-mobile-development/net-core-interview-questions)
+
+<br>
+
+<a href="https://devinterview.io/questions/web-and-mobile-development/">
+<img src="https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/github-blog-img%2Fweb-and-mobile-development-github-img.jpg?alt=media&token=1b5eeecc-c9fb-49f5-9e03-50cf2e309555" alt="web-and-mobile-development" width="100%">
+</a>
+</p>
+
